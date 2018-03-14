@@ -5,12 +5,10 @@ public class TestVendingMachine {
         for (PantType panttype: PantType.values())
             System.out.printf("%s\t%s\n", panttype, panttype.getPrice());
 
-        Can can = new Can("Coke", PantType.A, PantType.A.getPrice(), 1);
-        System.out.println("Brand: " + can.getName() + "\nPant: " + can.getType() + "(" + can.getPrice() + ") \nVolume: " + can.getVolume() + "\n") ;
+        Can can = new Can(PantType.A, 0.7);
+        System.out.println(can.getType() + "\t" + can.getVolume() + "\t" + can.getPrice());
 
-        Bottle bot = new Bottle("Pepsi", PantType.B, PantType.B.getPrice(), 0.5);
-        System.out.println("Brand: " + bot.getName() + "\nPant: " + bot.getType() + "(" + bot.getPrice() + ") \nVolume: " + bot.getVolume());
-
-
+        Bottle bot = new Bottle(PantType.C, 1.5);
+        System.out.println(bot.getType() + "\t" + bot.getVolume() + "\t" + bot.getPrice());
     }
 }

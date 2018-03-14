@@ -7,13 +7,15 @@ public class Pant{
     private Can can;
     private Bottle bottle;
     private double volume;
-    private boolean isBottle = false;
+    private boolean isBottle;
+
+
 
     public Pant(){
         if (volume >= 1){
             pant = PantType.C.getPrice();
         }
-        if (volume == 0.5 && isBottle == true ){
+        if (volume == 0.5 && isBottle == true){
             pant = PantType.B.getPrice();
         }
         if (volume < 1 ){

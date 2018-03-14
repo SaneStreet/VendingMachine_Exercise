@@ -1,33 +1,21 @@
 package VendingMachine;
 
-public class Bottle {
-    private String name;
-    private PantType type;
-    private double price;
-    private double volume;
+public class Bottle extends Containers {
+    private boolean isBottle;
 
     // Constructs the Bottle object with following elements:
-    public Bottle(String name, PantType type, double price, double volume) {
-        this.name = name;
+    public Bottle(PantType type, double volume) {
         this.type = type;
-        this.price = price;
         this.volume = volume;
+        calPrice();
+        setBottle(true);
     }
 
-    // Method for getting Name of Bottle
-    public String getName() {
-        return name;
+    public boolean isBottle() {
+        return isBottle;
     }
-    // Method for getting Type of Bottle
-    public PantType getType() {
-        return type;
-    }
-    // Method for getting Price of Bottle
-    public double getPrice() {
-        return price;
-    }
-    // Method for getting Volume of Bottle
-    public double getVolume() {
-        return volume;
+
+    public void setBottle(boolean bottle) {
+        isBottle = bottle;
     }
 }
