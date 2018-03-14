@@ -6,21 +6,21 @@ public class Pant{
     private double resultat;
     private Can can;
     private Bottle bottle;
+    private double volume;
+    private boolean isBottle = false;
 
     public Pant(){
-        if (type == PantType.A){
-            pant = PantType.A.getPrice();
+        if (volume >= 1){
+            pant = PantType.C.getPrice();
         }
-        if (type == PantType.B){
+        if (volume == 0.5 && isBottle == true ){
             pant = PantType.B.getPrice();
         }
-        if (type == PantType.C){
-            pant = PantType.C.getPrice();
+        if (volume < 1 ){
+            pant = PantType.A.getPrice();
         }
         else{
             System.out.println("Something done goofed up");
         }
-
-        
     }
 }
